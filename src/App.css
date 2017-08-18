@@ -1,0 +1,55 @@
+.App {
+  text-align: center;
+  font-family: papyrus; }
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px; }
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white; }
+
+/*.App-intro {
+  font-size: large; }*/
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+.card {
+  border: 1px solid black;
+  margin: 30px;
+  background-color: #F0E68C;
+  padding: 20px;
+}
+
+.column {
+  border: 2px solid black;
+  width: 32%;
+  display: inline-grid;
+  background-color: #DDA0DD;
+}
+
+.columnContainer {
+  border: 5px solid black;
+  background-color: #008B8B;
+}
+
+.columnTitle {
+  padding: 10px;
+}
+
+.newTaskButton {
+  margin: 20px;
+  padding: 5px;
+}
+
+.kanban {
+  padding: 10px;
+  font-size: 60px;
+}
