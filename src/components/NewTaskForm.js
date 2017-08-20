@@ -15,7 +15,7 @@ class NewTaskForm extends Component {
             newStatus: ''
           };
 
-          console.log(props);
+          //console.log(props);
 
           this.handleTaskChange = this.handleTaskChange.bind(this);
           this.handlePriorityChange = this.handlePriorityChange.bind(this);
@@ -105,7 +105,7 @@ class NewTaskForm extends Component {
       }
 
 const mapStateToProps = (state) => {
-  console.log(state)
+  //console.log(state)
   return {
     cards : state.cards
   };

@@ -6,14 +6,14 @@ import { deleteCard } from '../actions.js';
 class Card extends Component {
   constructor(props) {
     super(props);
-    console.log(props);
+    //console.log(props);
 
     this.handleDeleteCard = this.handleDeleteCard.bind(this);
 
   }
 
   handleDeleteCard(){
-    console.log('handleDeleteCard');
+    //console.log('handleDeleteCard');
     this.props.deleteCard(this.props.id);
   }
 

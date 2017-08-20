@@ -13,9 +13,6 @@ const Column = ({ status, cards }) => {
     <div className="column">
       <ColumnTitle ColumnTitle={ status }/>
       <ul>
-
-
-        {/*NEED TO FILTER THESE FOR CONTENT OF EACH COLUMN*/}
         {cards.map( card =>
           <Card
             key={card._id}

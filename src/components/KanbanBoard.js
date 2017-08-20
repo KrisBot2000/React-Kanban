@@ -2,30 +2,30 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ColumnContainer from './ColumnContainer.js';
 import NewTaskForm from './NewTaskForm.js';
-import {getCardsFromFakeXHR, addCardToFakeXHR} from '../lib/cards.db.js';
-import { loadCards } from '../actions.js';
+import { loadCards, addCard } from '../actions.js';
 
 class KanbanBoard extends Component {
   constructor(props) {
     super(props);
 
+    this.addCard = this.addCard.bind(this);
+
   }
 
-  componentDidMount(){
-    console.log('in DidMount');
-    getCardsFromFakeXHR()
-    .then(cards => {
-      this.props.loadCards(cards);
-    })
+  componentWillMount() {
+    this.props.loadCards();
+  }
+
+  addCard (card) {
+    this.props.addCard(card);
   }
 
 
 
   render() {
-    console.log('in render kanbanboard');
+    //console.log('in render kanbanboard');
     return (
       <div className='KanbanBoard'>
-
         <ColumnContainer cards={this.props.cards}/>
         <NewTaskForm/>
       </div>
@@ -44,9 +44,12 @@ const mapStateToProps = (state) => {
 //create a method to dispatch actions
 const mapDispatchToProps = (dispatch) => {
   return {
-    //action action(what's passed in)
-    loadCards: (cards) => {
-      dispatch(loadCards(cards));
+    //action(what's passed in)
+    loadCards: () => {
+      dispatch(loadCards())
+    },
+    addCard: (card) => {
+      dispatch(addCard(card))
     }
   }
 }
